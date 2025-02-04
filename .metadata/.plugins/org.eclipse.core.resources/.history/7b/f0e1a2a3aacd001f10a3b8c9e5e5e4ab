@@ -1,0 +1,17 @@
+# Author: Suthirshana
+# @All_scenario
+
+@LoginPage
+Feature: Login Page Functionality
+
+  @scenario_01
+  Scenario Outline: Successful Login with valid credentials
+    Given The user is on the login page
+    When User should login "<username>" and "<password>"
+    And Clicks the login button
+    Then The User should be redirected to the dashboard page
+    And quit the 1st Browser
+
+    Examples: 
+      | username                               | password |
+      | suthirshana.muniyappan@expleogroup.com | Suthir   |

@@ -1,0 +1,72 @@
+package stepDef;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import driver.allDrivers;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class registerNewAccount {
+	
+	WebDriver driver = new ChromeDriver();
+	
+	@Given("User is on the login page")
+	public void user_is_on_the_login_page() {
+		driver.get("http://192.168.99.141:3000");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+	}
+
+	@When("User clicks register new account")
+	public void user_clicks_register_new_account() {
+	    driver.findElement(By.xpath("//h4[normalize-space()='Register new account']")).click();
+	}
+
+	@Then("User enters valid email and password")
+	public void user_enters_valid_email_and_password() throws Throwable {
+		driver.findElement(By.name("username")).sendKeys("suthirshana@expleogroup.com");  
+		Thread.sleep(2000);
+		driver.findElement(By.id("Password")).sendKeys("Suthir");
+		driver.findElement(By.id("confirmPassword")).sendKeys("Suthir");
+	}
+
+	@Then("User creates an account successfully")
+	public void user_creates_an_account_successfully() {
+		WebElement successmsg =driver.findElement(By.xpath("//h4[normalize-space()='Register new account'])"));
+		successmsg.click();	
+	}
+
+	@Then("User navigate to the login page")
+	public void user_navigate_to_the_login_page() {
+	    driver.findElement(By.xpath("//button[normalize-space()='Navigate to login Page']")).click();
+	}
+
+	@Then("Clicks submit button")
+	public void clicks_submit_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User is navigated to dashboard")
+	public void user_is_navigated_to_dashboard() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Close the browser")
+	public void close_the_browser() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

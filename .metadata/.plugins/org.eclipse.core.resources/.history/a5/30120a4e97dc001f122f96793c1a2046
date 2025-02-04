@@ -1,0 +1,18 @@
+package StepDefinition_SauceDemo;
+
+import org.openqa.selenium.By;
+
+import driver.driverInstance;
+import io.cucumber.java.en.When;
+
+public class invalidLogintoSauceDemo extends driverInstance {
+
+	
+	@When("User enter invalid Username and Password")
+	public void user_enter_invalid_username_and_password() {
+		driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+	}
+
+
+}

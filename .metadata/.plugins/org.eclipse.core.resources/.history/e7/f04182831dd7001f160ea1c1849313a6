@@ -1,0 +1,32 @@
+package hooks;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import driver.allDrivers;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+public class hooksClass extends allDrivers{
+	
+	
+	@Before
+	
+	public void browserLaunch(Scenario scenerio) {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		if (scenerio.getSourceTagNames().contains("@deleteUser")) {
+	        driver.get("http://192.168.99.141:3000/home");
+	    } else {
+	        driver.get("http://192.168.99.141:3000/");
+	    }
+	}
+	
+	@After
+	public void quit() {
+		driver.quit();
+
+	}
+
+}

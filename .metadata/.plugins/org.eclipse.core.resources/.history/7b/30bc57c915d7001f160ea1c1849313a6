@@ -1,0 +1,194 @@
+package baseClass_Suthir;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import driver.allDrivers;
+
+public class baseClass extends allDrivers{
+	
+	public void launchDriver(String URL) {
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(URL);
+	}
+	
+	public void quitBrowser() {
+	driver.quit();
+	}
+	
+	public void closeBrowser() {
+		driver.close();
+
+	}
+	public void clickElement(WebElement element) { 
+	
+		element.click();
+	}
+
+	public void getTitle() {
+	
+		String title = driver.getTitle();
+		System.out.println("User is on the Login Page: "+title);
+	}
+
+
+	public WebElement findElementID(String ID) {
+	
+		WebElement elementID = driver.findElement(By.id(ID));
+		elementID.click();
+		return elementID;
+	}
+
+	public WebElement findElementName(String Name) {
+	
+		WebElement elementName = driver.findElement(By.name(Name));
+		elementName.click();
+		return elementName;
+	}
+
+	public WebElement findElementXpath(String xpath)
+	{
+		WebElement elementXpath = driver.findElement(By.xpath(xpath));
+		elementXpath.click();
+		return elementXpath;
+	}
+
+	public WebElement findElementLinkedText(String xpath)
+	{
+		WebElement elementLinkedText = driver.findElement(By.xpath(xpath));
+		elementLinkedText.click();
+		return elementLinkedText;
+	}
+
+	public void sendKeys(WebElement element, String keys)
+	{
+		element.sendKeys(keys);
+	}
+	public void frameByElement(WebElement frameElement) {
+		driver.switchTo().frame(frameElement);
+	}
+
+	// Switch to a frame by index
+	public void frameByIndex(int index) {
+		driver.switchTo().frame(index);
+	}
+
+	// Switch to a frame by name or ID
+	public void switchToFrameByNameOrID(String nameOrID) {
+		driver.switchTo().frame(nameOrID);
+	}
+
+	// Switch back to the default content
+	public void switchToDefaultContent() {
+		driver.switchTo().defaultContent();
+	}
+	
+	// Switch to a frame by its parent or ancestor hierarchy
+		public void switchToParentFrame() {
+			driver.switchTo().parentFrame();
+		}
+
+		// Get all frames on the page
+		public List<WebElement> getAllFrames() {
+			return driver.findElements(By.tagName("iframe"));
+		}
+
+		// Switch to the first frame on the page
+		public void switchToFirstFrame() {
+			List<WebElement> frames = getAllFrames();
+			if (!frames.isEmpty()) {
+				driver.switchTo().frame(frames.get(0));
+			}
+		}
+		
+		// Switch to the last frame on the page
+		public void switchToLastFrame() {
+			List<WebElement> frames = getAllFrames();
+			if (!frames.isEmpty()) {
+				driver.switchTo().frame(frames.get(frames.size() - 1));
+			}
+		}
+
+		// Count the total number of frames on the page
+		public int getFrameCount() {
+			return getAllFrames().size();
+		}
+
+		// Check if the current page contains frames
+		public boolean hasFrames() {
+			return getFrameCount() > 0;
+		}
+		
+		// Select an option from a dropdown by visible text
+		public void selectByVisibleText(WebElement dropDownElement, String visibleText) {
+			Select select = new Select(dropDownElement);
+			select.selectByVisibleText(visibleText);
+		}
+		
+
+		// Select an option from a dropdown by index
+		public void selectByIndex(WebElement dropDownElement, int index) {
+			Select select = new Select(dropDownElement);
+			select.selectByIndex(index);
+		}
+
+		public void selectByValue(WebElement dropDownElement, String value) {
+			Select select = new Select(dropDownElement);
+			select.selectByValue(value);
+		}
+
+		public List<WebElement> getOptions(WebElement dropdown) {
+			Select select = new Select(dropdown);
+			return select.getOptions();
+		}
+		
+		// Get the first selected option from a dropdown
+		public WebElement getFirstSelectedOption(WebElement dropdown) {
+			Select select = new Select(dropdown);
+			return select.getFirstSelectedOption();
+		}
+
+		// Get all selected options (for multi-select dropdowns)
+		public List<WebElement> getAllSelectedOptions(WebElement dropdown) {
+			Select select = new Select(dropdown);
+			return select.getAllSelectedOptions();
+		}
+
+		// Check if a dropdown allows multiple selections
+		public boolean isMultiSelect(WebElement dropdown) {
+			Select select = new Select(dropdown);
+			return select.isMultiple();
+		}
+		
+		// Deselect an option by visible text (for multi-select dropdowns)
+		public void deselectByVisibleText(WebElement dropdown, String visibleText) {
+			Select select = new Select(dropdown);
+			select.deselectByVisibleText(visibleText);
+		}
+
+		// Deselect an option by index (for multi-select dropdowns)
+		public void deselectByIndex(WebElement dropdown, int index) {
+			Select select = new Select(dropdown);
+			select.deselectByIndex(index);
+		}
+
+		// Deselect an option by value (for multi-select dropdowns)
+		public void deselectByValue(WebElement dropdown, String value) {
+			Select select = new Select(dropdown);
+			select.deselectByValue(value);
+		}
+
+		// Deselect all options (for multi-select dropdowns)
+		public void deselectAll(WebElement dropdown) {
+			Select select = new Select(dropdown);
+			select.deselectAll();
+		}
+
+
+
+}

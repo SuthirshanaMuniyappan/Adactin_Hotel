@@ -1,0 +1,19 @@
+package testRunner_SauceDemo;
+
+import io.cucumber.junit.CucumberOptions;
+
+@CucumberOptions(
+		features="src/test/resources",
+		glue= {"stepdefinition_SauceDemo","hooks"}, 
+				plugin= {"pretty", "json:target/cucumber.json",
+						"html:target/cucumber.html"},
+				tags="LoginPage",
+				dryRun=true
+		
+		)
+
+public class TestRunnerSauceDemo {
+	
+	
+
+}

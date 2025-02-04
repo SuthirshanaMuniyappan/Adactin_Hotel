@@ -1,0 +1,7 @@
+package StepDefinition_SauceDemo;
+
+import driver.driverInstance;
+
+public class Multipleproductsremove extends driverInstance {
+
+}

@@ -1,0 +1,77 @@
+1737340187269	Rename resource 'feature01_LoginPage.feature'
+1737340203160	Rename resource 'feature02_AddNewInsurance.feature'
+1737340213934	Rename resource 'feature03_Deletepolicy.feature'
+1737340223400	Rename resource 'feature04_ForgetPassword.feature'
+1737340235785	Rename resource 'feature05_RegisterNewAccount.feature'
+1737340248526	Rename resource 'feature06_PrintTheTableHeader.feature'
+1737340259592	Rename resource 'feature07_DeleteAccount.feature'
+1737340270087	Rename resource 'feature08_PaymentPage.feature'
+1737340281047	Rename resource 'feature09_deleteSelectedPolicy.feature'
+1737340290807	Rename resource 'feature10_deleteRegisteredUser.feature'
+1737340301573	Rename resource 'feature11_withoutNameNewInsurance.feature'
+1737340313290	Rename resource 'feature12_withoutEmailNewInsurance.feature'
+1737340324594	Rename resource 'feature13_withoutAddressNewInsurance.feature'
+1737355146027	Rename resource 'TC01_LoginPage.feature'
+1737355173131	Rename resource 'TC02_AddNewInsurance.feature'
+1737355190042	Rename resource 'TC03_Deletepolicy.feature'
+1737355205913	Rename resource 'TC04_ForgetPassword.feature'
+1737355218074	Rename resource 'TC05_RegisterNewAccount.feature'
+1737355250572	Rename resource 'TC06_PrintTheTableHeader.feature'
+1737355264326	Rename resource 'TC07_DeleteAccount.feature'
+1737355280606	Rename resource 'TC08_PaymentPage.feature'
+1737355292071	Rename resource 'TC09_deleteSelectedPolicy.feature'
+1737355308449	Rename resource 'TC10_deleteRegisteredUser.feature'
+1737355318775	Rename resource 'TC11_withoutNameNewInsurance.feature'
+1737355490428	Rename resource 'TC12_withoutEmailNewInsurance.feature'
+1737355503116	Rename resource 'TC13_withoutAddressNewInsurance.feature'
+1737355533498	Rename type 'loginPage'
+1737355561073	Rename type 'newInsurancePage'
+1737355577025	Rename type 'deletePolicy'
+1737355591909	Rename type 'forgetPassword'
+1737355608253	Rename type 'registerNewAccount'
+1737356078084	Rename type 'printTheTableHeader'
+1737356115953	Rename type 'paymentPage'
+1737356143608	Rename type 'deleteSelectedpolicy'
+1737356158274	Rename type 'deleteRegisteredUser'
+1737356197767	Rename type 'TC07_printTheTableHeader'
+1737356221350	Rename type 'deleteAccount'
+1737356246884	Rename type 'withoutNameNewInsurance'
+1737356265066	Rename type 'withoutEmailNewInsurance'
+1737356277280	Rename type 'withoutAddressNewInsurance'
+1737375010340	Rename resource 'TC01_LoginPage.feature'
+1737375024964	Rename resource 'TC02_AddNewInsurance.feature'
+1737375038816	Rename resource 'TC03_Deletepolicy.feature'
+1737375052480	Rename resource 'TC04_ForgetPassword.feature'
+1737375066063	Rename resource 'TC05_RegisterNewAccount.feature'
+1737375077765	Rename resource 'TC06_PrintTheTableHeader.feature'
+1737375088585	Rename resource 'TC07_DeleteAccount.feature'
+1737375103962	Rename resource 'TC08_PaymentPage.feature'
+1737375115548	Rename resource 'TC09_deleteSelectedPolicy.feature'
+1737375128604	Rename resource 'TC10_deleteRegisteredUser.feature'
+1737375141342	Rename resource 'TC11_withoutNameNewInsurance.feature'
+1737375168989	Rename resource 'TC12_withoutEmailNewInsurance.feature'
+1737375181635	Rename resource 'TC13_withoutAddressNewInsurance.feature'
+1737375263261	Rename type 'loginPage'
+1737375349532	Rename type 'TC01_loginPage'
+1737398766028	Rename type 'withoutSumInsured'
+1737451108675	Copy file
+1737451125839	Copy file
+1737451136120	Copy file
+1737451162887	Copy compilation unit
+1737451175682	Copy compilation unit
+1737451188191	Copy compilation unit
+1737452978212	Copy files
+1737453007814	Copy compilation unit
+1737453023400	Copy compilation unit
+1737453032037	Copy compilation unit
+1737455804413	Copy file
+1737455825291	Copy file
+1737455836922	Copy compilation unit
+1737458473720	Copy file
+1737458504974	Copy compilation unit
+1737458879462	Copy file
+1737458892409	Copy compilation unit
+1737549551337	Rename resource 'feature20_multipleDelete'
+1737549610056	Delete element
+1737621955289	Copy file
+1737629007716	Copy file

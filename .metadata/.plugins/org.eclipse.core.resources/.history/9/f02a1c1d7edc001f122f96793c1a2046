@@ -1,0 +1,12 @@
+#@AddToCart
+Feature: Add Multiple Products
+
+#Author: Suthir
+
+  Scenario: Successful login with valid credentials
+    Given User navigate to the Sauce Demo login page
+    When User enter valid Username and Password
+    Then User should be logged in successfully
+    And Add to Cart products
+    Then user add all the product to the cart
+    And Quit the browser

@@ -1,0 +1,26 @@
+package hooks;
+import org.openqa.selenium.chrome.ChromeDriver;
+import driver.driverInstance;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+public class hooksClass extends driverInstance {
+	
+	
+	
+	@Before
+	private void launchBrowser() {
+		driver = new ChromeDriver();
+		driver.get("https://www.saucedemo.com/");
+		driver.manage().window().maximize();
+		}
+	
+	@After
+	private void quitBrowser() {
+		driver.quit();
+		
+
+	}
+
+}

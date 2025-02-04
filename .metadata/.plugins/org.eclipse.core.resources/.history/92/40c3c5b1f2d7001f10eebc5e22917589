@@ -1,0 +1,37 @@
+package stepDef;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class adminPanelManageUsers {
+	
+	WebDriver driver = new ChromeDriver();
+	
+	@When("user clicks the Admin panel")
+	public void user_clicks_the_admin_panel() throws InterruptedException {
+		WebElement Admin_panel = driver.findElement(By.xpath("//a[normalize-space()='Admin Panel']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", Admin_panel);
+		Thread.sleep(3000);
+	}
+
+	@When("user clicks manage users to View Users")
+	public void user_clicks_manage_users_to_view_users() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user delete the button")
+	public void user_delete_the_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

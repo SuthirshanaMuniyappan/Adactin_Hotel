@@ -1,0 +1,24 @@
+package StepDefinition_SauceDemo;
+
+import org.openqa.selenium.By;
+
+import driver.driverInstance;
+import io.cucumber.java.en.Then;
+
+public class Multipleproductsremove extends driverInstance {
+	
+	@Then("user add another product to the cart")
+	public void user_add_another_product_to_the_cart() {
+		
+		driver.findElement(By.id("add-to-cart-sauce-labs-bolt-t-shirt")).click();
+	   
+	}
+
+	@Then("user removes the product from the cart")
+	public void user_removes_the_product_from_the_cart() {
+	    
+	}
+
+		
+
+}

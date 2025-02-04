@@ -1,0 +1,340 @@
+package hooks;
+
+import java.util.List;
+
+import javax.annotation.Nullable;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseClass {
+	
+	public static WebDriver driver;
+	 String browserName="CHROME";
+	
+	public static WebDriver launchBrowser(String browserName) {
+		        switch (browserName.toUpperCase()) {
+		            case "CHROME":
+		                WebDriverManager.chromedriver().setup();
+		                driver = new ChromeDriver();
+		                break;
+		                
+		            case "FIREFOX":
+		                WebDriverManager.firefoxdriver().setup();
+		                driver = new FirefoxDriver();
+		                break;
+		                
+		            case "EDGE":
+		                WebDriverManager.edgedriver().setup();
+		                driver = new EdgeDriver();
+		                break;
+		                
+		            default:
+		                throw new IllegalArgumentException("Browser not supported: " + browserName);
+		        }
+		        driver.manage().window().maximize();  
+		        return driver;
+		    }
+	
+	private void quitBrowser() {
+		driver.quit();
+
+	}
+	
+	private void closeBrowser() {
+		driver.close();
+	}
+	
+	//============== WebElement ===============
+	
+	 private void clickElement(WebElement element) {
+		 element.click();
+		
+	}
+	 private void getTitle() {
+		String title = driver.getTitle();
+		System.out.println("User is on Login Page:" +title);
+
+	}
+
+	public WebElement findElementID(String ID) {
+		WebElement elementID = driver.findElement(By.id(ID));
+		elementID.click();
+		return elementID;
+	}
+	 
+	public WebElement findElementName(String Name) {
+		WebElement elementName = driver.findElement(By.id(Name));
+		elementName.click();
+		return elementName;
+	}
+	 
+	public WebElement findElementClassName(String ClassName) {
+		WebElement elementClassName = driver.findElement(By.id(ClassName));
+		elementClassName.click();
+		return elementClassName;
+	}
+	 
+	public WebElement findElementXpath(String Xpath) {
+		WebElement elementxpath = driver.findElement(By.xpath(Xpath));
+		elementxpath.click();
+		return elementxpath;
+	}
+	public WebElement findElementLinkedText(String Xpath) {
+	
+		WebElement elementLinkedText = driver.findElement(By.xpath(Xpath));
+		elementLinkedText.click();
+		return elementLinkedText;
+	}
+
+	public void sendKeys(WebElement element, String keys) {
+	
+		element.sendKeys(keys);
+	}
+	
+	//================= Frames ===========
+	 
+	public void frameByElement(WebElement frameElement) {
+		driver.switchTo().frame(frameElement);
+	}
+
+	// Switch to a frame by index
+	public void frameByIndex(int index) {
+		driver.switchTo().frame(index);
+	}
+
+	// Switch to a frame by name or ID
+	public void switchToFrameByNameOrID(String nameOrID) {
+		driver.switchTo().frame(nameOrID);
+	}
+
+	// Switch back to the default content
+	public void switchToDefaultContent() {
+		driver.switchTo().defaultContent();
+	}
+
+	// Switch to a frame by its parent or ancestor hierarchy
+	public void switchToParentFrame() {
+		driver.switchTo().parentFrame();
+	}
+
+	// Get all frames on the page
+	public List<WebElement> getAllFrames() {
+		return driver.findElements(By.tagName("iframe"));
+	}
+
+	// Switch to the first frame on the page
+	public void switchToFirstFrame() {
+		List<WebElement> frames = getAllFrames();
+		if (!frames.isEmpty()) {
+			driver.switchTo().frame(frames.get(0));
+		}
+	}
+
+	// Switch to the last frame on the page
+	public void switchToLastFrame() {
+		List<WebElement> frames = getAllFrames();
+		if (!frames.isEmpty()) {
+			driver.switchTo().frame(frames.get(frames.size() - 1));
+		}
+	}
+
+	// Count the total number of frames on the page
+	public int getFrameCount() {
+		return getAllFrames().size();
+	}
+
+	// Check if the current page contains frames
+	public boolean hasFrames() {
+		return getFrameCount() > 0;
+	}
+
+	//==========SELECT Method==================
+	
+	// Select an option from a dropdown by visible text
+	public void selectByVisibleText(WebElement dropDownElement, String visibleText) {
+		Select select = new Select(dropDownElement);
+		select.selectByVisibleText(visibleText);
+	}
+
+	// Select an option from a dropdown by index
+	public void selectByIndex(WebElement dropDownElement, int index) {
+		Select select = new Select(dropDownElement);
+		select.selectByIndex(index);
+	}
+
+	public void selectByValue(WebElement dropDownElement, String value) {
+		Select select = new Select(dropDownElement);
+		select.selectByValue(value);
+	}
+
+	public List<WebElement> getOptions(WebElement dropdown) {
+		Select select = new Select(dropdown);
+		return select.getOptions();
+	}
+
+	// Get the first selected option from a dropdown
+	public WebElement getFirstSelectedOption(WebElement dropdown) {
+		Select select = new Select(dropdown);
+		return select.getFirstSelectedOption();
+	}
+
+	// Get all selected options (for multi-select dropdowns)
+	public List<WebElement> getAllSelectedOptions(WebElement dropdown) {
+		Select select = new Select(dropdown);
+		return select.getAllSelectedOptions();
+	}
+
+	// Check if a dropdown allows multiple selections
+	public boolean isMultiSelect(WebElement dropdown) {
+		Select select = new Select(dropdown);
+		return select.isMultiple();
+	}
+
+	// Deselect an option by visible text (for multi-select dropdowns)
+	public void deselectByVisibleText(WebElement dropdown, String visibleText) {
+		Select select = new Select(dropdown);
+		select.deselectByVisibleText(visibleText);
+	}
+
+	// Deselect an option by index (for multi-select dropdowns)
+	public void deselectByIndex(WebElement dropdown, int index) {
+		Select select = new Select(dropdown);
+		select.deselectByIndex(index);
+	}
+
+	// Deselect an option by value (for multi-select dropdowns)
+	public void deselectByValue(WebElement dropdown, String value) {
+		Select select = new Select(dropdown);
+		select.deselectByValue(value);
+	}
+
+	// Deselect all options (for multi-select dropdowns)
+	public void deselectAll(WebElement dropdown) {
+		Select select = new Select(dropdown);
+		select.deselectAll();
+	}
+
+	//==================ACTIONS=============
+	// Perform a hover action on an element
+	public void moveToElement(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).build().perform();
+	}
+
+	// Perform a right-click (context click) on an element
+	public void rightClickAction(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.contextClick(element).build().perform();
+	}
+
+	// Perform a double-click on an element
+	public void doubleClickAction(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.doubleClick(element).build().perform();
+	}
+
+	// Drag and drop an element to a target element
+	public void dragAndDrop(WebElement source, WebElement dest) {
+		Actions actions = new Actions(driver);
+		actions.dragAndDrop(source, dest).build().perform();
+	}
+
+	// Drag and drop an element to an offset position
+	public void dragAndDropByOffset(WebElement source, int xOffset, int yOffset) {
+		Actions actions = new Actions(driver);
+		actions.dragAndDropBy(source, xOffset, yOffset).perform();
+	}
+
+	// Click and hold an element, then release
+	public void clickAndHoldAction(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.clickAndHold(element).perform();
+	}
+
+	// Release a clicked element
+	public void releaseElement(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.release(element).perform();
+	}
+
+	// Send keys to an element using Actions
+	public void sendKeysWithActions(WebElement element, String keys) {
+		Actions actions = new Actions(driver);
+		actions.sendKeys(element, keys).perform();
+	}
+
+	// Perform a key-down action
+	public void keyDownAction(WebElement element, String key) {
+		Actions actions = new Actions(driver);
+		actions.keyDown(element, key).perform();
+	}
+
+	// Perform a key-up action
+	public void keyUpAction(WebElement element, String key) {
+		Actions actions = new Actions(driver);
+		actions.keyUp(element, key).perform();
+	}
+
+	// Perform a scroll to an element
+	public void scrollToElement(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).perform();
+	}
+
+	//==========NAVIGATE=============//
+
+	// Navigate to a specific URL
+	public void navigateTo(String url) {
+		driver.navigate().to(url);
+	}
+
+	// Navigate back to the previous page
+	public void navigateBack() {
+		driver.navigate().back();
+	}
+
+	// Navigate forward to the next page
+	public void navigateForward() {
+		driver.navigate().forward();
+	}
+
+	// Refresh the current page
+		public void refreshPage() {
+			driver.navigate().refresh();
+		}
+
+		// Get the current page URL
+		public String getCurrentUrl() {
+			@Nullable
+			String currentUrl = driver.getCurrentUrl();
+			System.out.println(currentUrl);
+			return currentUrl;
+		}
+
+		// Get the current page title
+		public String getPageTitle() {
+			return driver.getTitle();
+		}
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+	
+		   
+}

@@ -1,0 +1,69 @@
+package stepDef;
+
+import static org.testng.Assert.assertEquals;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class validateLandingPageTitle {
+	
+	WebDriver driver = new ChromeDriver();
+	
+	
+	@Given("The user is on the login page")
+	public void the_user_is_on_the_login_page() {
+		driver.get("http://192.168.99.141:3000");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	
+	@When("User should login {string} and {string}")
+	public void user_should_login_and(String username, String password) throws Exception {
+		
+		Thread.sleep(3000);
+		driver.findElement(By.name("username")).sendKeys(username);  //"suthirshana.muniyappan@expleogroup.com"
+		
+		Thread.sleep(3000);
+		driver.findElement(By.id("Password")).sendKeys(password); //"Suthir"
+	}
+	@When("Clicks the login button")
+	public void clicks_the_login_button() throws Throwable {
+		
+		Actions actions = new Actions(driver);
+		
+		Thread.sleep(5000);
+//		driver.findElement(By.xpath("//button[text()='Submit']")).click();
+		
+		WebElement login_btn = driver.findElement(By.xpath("//button[@type='submit']"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].click();", login_btn);
+		actions.click(login_btn).build().perform();
+//		login_btn.click();
+	}
+	
+	@Then("Validate the dashboard page title")
+	public void validate_the_dashboard_page_title() throws Throwable {
+	    
+		Thread.sleep(2000);
+		WebElement tile = driver.findElement(By.xpath("//p[@class='text-lg font-bold text-white']"));
+		String page_title = tile.getText();
+		assertEquals("ExpleoSurance", page_title);
+		System.out.println(page_title+" is validated successfully");
+		
+	}
+
+	@Then("quit the Browser")
+	public void quit_the_browser() {
+		System.out.println("Scenario 5th completed successfully");	 
+		driver.quit();
+	}
+
+}

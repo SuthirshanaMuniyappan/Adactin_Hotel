@@ -1,0 +1,27 @@
+package stepDef;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class withoutSumInsuredNewInsurance {
+	
+	WebDriver driver= new ChromeDriver();
+	
+	@When("User filled all the fields without SumInsured")
+	public void user_filled_all_the_fields_without_sum_insured() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("It should show the error msg Please select Sum Insured")
+	public void it_should_show_the_error_msg_please_select_sum_insured() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

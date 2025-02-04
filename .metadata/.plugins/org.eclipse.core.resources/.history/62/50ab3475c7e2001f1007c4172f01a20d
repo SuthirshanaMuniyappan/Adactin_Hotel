@@ -1,0 +1,29 @@
+package stepDefinitionNOP;
+
+import io.cucumber.java.en.*;
+
+public class NOP_Login {
+	
+	@Given("User is on the NOP Commerce login page")
+	public void user_is_on_the_nop_commerce_login_page() {
+	      
+	   
+	}
+	@When("User should login with {string} and {string}")
+	public void user_should_login_with_and(String string, String string2) {
+	      
+	      
+	}
+	@When("User clicks the remember me button")
+	public void user_clicks_the_remember_me_button() {
+	      
+	      
+	}
+	@When("User clicks the login button")
+	public void user_clicks_the_login_button() {
+	      
+	   
+	}
+	
+
+}

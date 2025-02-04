@@ -1,0 +1,37 @@
+package stepDef;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.cucumber.java.en.*;
+
+public class adminPanelManageUsers {
+	
+	WebDriver driver = new ChromeDriver();
+	
+	@When("user clicks the Admin panel")
+	public void user_clicks_the_admin_panel() {
+		Thread.sleep(3000);
+		WebElement initiation = driver.findElement(By.xpath("//a[text()='Policy Initiation']"));
+		Actions action = new Actions(driver); 
+		action.click(initiation).build().perform();
+	}
+
+	@When("user clicks manage users to View Users")
+	public void user_clicks_manage_users_to_view_users() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user delete the button")
+	public void user_delete_the_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

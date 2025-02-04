@@ -1,0 +1,25 @@
+package baseClass_Suthir;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import driver.allDrivers;
+
+public class baseClass extends allDrivers{
+	
+	public void launchDriver(String URL) {
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(URL);
+	}
+	
+	public void quitBrowser() {
+	driver.quit();
+	}
+	
+	public void closeBrowser() {
+		
+
+	}
+
+
+}

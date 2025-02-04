@@ -1,0 +1,40 @@
+package StepDefinition_SauceDemo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import driver.driverInstance;
+import io.cucumber.java.en.*;
+
+public class Filters extends driverInstance {
+
+	@When("User select the filter option \\(A to Z) and take screenshot")
+	public void user_select_the_filter_option_a_to_z_and_take_screenshot() {
+		WebElement filter = driver.findElement(By.className("product_sort_container"));
+		Select select = new Select(filter);
+		
+
+	}
+	@When("User select the filter option \\(Z to A) and take screenshot")
+	public void user_select_the_filter_option_z_to_a_and_take_screenshot() {
+
+
+	}
+	@When("User select the filter option price \\(low to high) and take screenshot")
+	public void user_select_the_filter_option_price_low_to_high_and_take_screenshot() {
+
+
+	}
+	@When("User select the filter option price \\(high to low) and take screenshot")
+	public void user_select_the_filter_option_price_high_to_low_and_take_screenshot() {
+
+
+	}
+	@Then("page logout")
+	public void page_logout() {
+
+
+	}
+
+}

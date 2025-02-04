@@ -1,0 +1,27 @@
+package stepDef;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class withoutDOBNewInsurance {
+	
+	WebDriver driver= new ChromeDriver();
+	
+	@When("User filled all the fields without DOB")
+	public void user_filled_all_the_fields_without_dob() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("It should show the error msg DOB is Required")
+	public void it_should_show_the_error_msg_dob_is_required() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

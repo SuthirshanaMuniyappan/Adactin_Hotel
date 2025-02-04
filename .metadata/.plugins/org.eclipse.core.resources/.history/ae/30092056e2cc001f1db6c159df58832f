@@ -1,0 +1,16 @@
+#Author: Suthir
+
+@RegisterNewAccount
+Scenario: User can able to Register New Account
+
+Given User is on the login page
+When User clicks register new account
+Then User enters valid email and password
+And User creates an account successfully
+And User navigate to the login page
+And User enters valid email and password
+And Clicks submit button 
+Then User is navigated to dashboard
+And Close the browser
+
+ 

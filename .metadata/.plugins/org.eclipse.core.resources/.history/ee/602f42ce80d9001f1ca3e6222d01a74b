@@ -1,0 +1,23 @@
+package StepDefinition_SauceDemo;
+
+import org.openqa.selenium.By;
+
+import driver.driverInstance;
+import io.cucumber.java.en.Then;
+
+public class LogoutSauceDemo extends driverInstance {
+	@Then("User clicks the three lines")
+	public void user_clicks_the_three_lines() {
+	    driver.findElement(By.xpath("//button[text()='Open Menu']")).click();
+	}
+
+	@Then("User clicks the logout")
+	public void user_clicks_the_logout() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

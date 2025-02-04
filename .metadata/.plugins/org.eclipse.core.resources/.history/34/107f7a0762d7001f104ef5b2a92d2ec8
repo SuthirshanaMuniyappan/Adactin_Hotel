@@ -1,0 +1,56 @@
+package stepDef;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+
+public class quateGeneration {
+	
+	WebDriver driver = new ChromeDriver();
+	@Given("user login the page with valid credential")
+	public void user_login_the_page_with_valid_credential() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user click the quate generation")
+	public void user_click_the_quate_generation() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user select the policy type")
+	public void user_select_the_policy_type() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user enter the Coverage Amount")
+	public void user_enter_the_coverage_amount() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user enter Customer Age")
+	public void user_enter_customer_age() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user click generate quote")
+	public void user_click_generate_quote() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user print the msgs")
+	public void user_print_the_msgs() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

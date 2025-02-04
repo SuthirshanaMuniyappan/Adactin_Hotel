@@ -1,0 +1,38 @@
+package StepDefinition_SauceDemo;
+
+import driver.driverInstance;
+
+public class checkout extends driverInstance {
+	
+	@Then("User click the Check out button")
+	public void user_click_the_check_out_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User fills the information firstname and lastname and postalcode")
+	public void user_fills_the_information_firstname_and_lastname_and_postalcode() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User clicks the continue button")
+	public void user_clicks_the_continue_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User navigate to the overview page")
+	public void user_navigate_to_the_overview_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user click finish buton")
+	public void user_click_finish_buton() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+}

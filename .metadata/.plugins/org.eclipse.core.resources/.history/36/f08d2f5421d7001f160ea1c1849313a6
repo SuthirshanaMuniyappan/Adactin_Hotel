@@ -1,0 +1,36 @@
+package hooks;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BaseClass {
+	
+	public static WebDriver driver;
+	 String browserName="CHROME";
+	
+	public static WebDriver launchBrowser(browserName) {
+		        switch (browserName.toUpperCase()) {
+		            case "CHROME":
+		                WebDriverManager.chromedriver().setup();
+		                driver = new ChromeDriver();
+		                break;
+		                
+		            case "FIREFOX":
+		                WebDriverManager.firefoxdriver().setup();
+		                driver = new FirefoxDriver();
+		                break;
+		                
+		            case "EDGE":
+		                WebDriverManager.edgedriver().setup();
+		                driver = new EdgeDriver();
+		                break;
+		                
+		            default:
+		                throw new IllegalArgumentException("Browser not supported: " + browserName);
+		        }
+		        driver.manage().window().maximize();  
+		        return driver;
+		    }
+
+		   
+}

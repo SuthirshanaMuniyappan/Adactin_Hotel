@@ -1,0 +1,9 @@
+Feature: Filter validation
+
+Scenario: Validation of filers 
+	Given User navigate to the Sauce Demo login page
+  When User enter valid Username and Password
+  Then User should be logged in successfully
+	When
+	And
+	Then

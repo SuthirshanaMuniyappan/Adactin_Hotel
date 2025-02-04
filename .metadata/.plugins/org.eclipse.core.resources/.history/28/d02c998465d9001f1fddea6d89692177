@@ -1,0 +1,16 @@
+package testRunner_SauceDemo;
+
+import io.cucumber.junit.CucumberOptions;
+
+@CucumberOptions(
+		features="src/test/resources",
+		glue= {"stepdefinition_SauceDemo"}, 
+				plugin= {"pretty", "json:target/cucumber.json"}
+		
+		)
+
+public class TestRunnerSauceDemo {
+	
+	
+
+}

@@ -1,0 +1,14 @@
+package StepDefinition_SauceDemo;
+
+import driver.driverInstance;
+
+public class printTableHeaderSwagLabs extends driverInstance {
+	
+	@Then("Print Header Swag Labs")
+	public void print_header_swag_labs() {
+	   
+	}
+
+
+
+}

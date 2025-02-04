@@ -1,0 +1,13 @@
+
+@All_scenario
+@adminPanelManageUsers
+Feature: TC13_Admin Panel
+
+#Author:Suthir
+
+  Scenario Outline: Admin Panel Manager Users Delete
+    Given user login the page with valid credential
+    When user clicks the Admin panel
+    And user clicks manage users to View Users
+    Then user delete the button
+    And Quit the browser

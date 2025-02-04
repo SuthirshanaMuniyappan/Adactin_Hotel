@@ -1,0 +1,20 @@
+package testRunner;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.CucumberOptions.SnippetType;
+
+//@RunWith(Cucumber.class)
+@CucumberOptions(
+		features ={"src/test/resources"},
+		glue = {"stepDefinitionNOP", "hooks"},
+	    tags = "@All_scenarios", 
+		plugin = {"pretty", "json:target/cucumber.json", 
+							"html:target/cucumber.html"},
+		snippets = SnippetType.UNDERSCORE,
+		dryRun = true
+		) 
+public class testRunnerClassNopCommerce extends AbstractTestNGCucumberTests{
+	
+	
+	
+}

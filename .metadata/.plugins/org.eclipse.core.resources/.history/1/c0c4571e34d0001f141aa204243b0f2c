@@ -1,0 +1,14 @@
+#Author: Suthir
+@landingPageTitle
+Feature: Validating The Landing Page Title ExpleoSurance
+
+  Scenario Outline: Validate the landing page title
+    Given The user is on the login page
+    When User should login "<username>" and "<password>"
+    And Clicks the Submit button
+    Then Validate the dashboard page title
+    And quit the Browser
+
+    Examples: 
+      | username                               | password |
+      | suthirshana.muniyappan@expleogroup.com | Suthir   |

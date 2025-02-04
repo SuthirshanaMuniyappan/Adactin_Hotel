@@ -1,0 +1,8 @@
+@LoginPage
+Feature: Login to Sauce Demo
+
+  Scenario: Successful login with valid credentials
+    Given I navigate to the Sauce Demo login page
+    When I enter valid credentials
+    Then I should be logged in successfully
+    And Quit the browser

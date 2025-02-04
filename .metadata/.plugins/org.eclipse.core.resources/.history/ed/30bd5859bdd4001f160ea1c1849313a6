@@ -1,0 +1,38 @@
+package stepDef;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class withoutPremiumNewInsurance {
+	
+	WebDriver driver = new ChromeDriver();
+	
+	@Given("User should be in login Page for field validating")
+	public void user_should_be_in_login_page_for_field_validating() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User Clicks the NewInsurance Tab")
+	public void user_clicks_the_new_insurance_tab() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters all the Fields Without Name")
+	public void user_enters_all_the_fields_without_name() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User click the Submit button and it should show Error")
+	public void user_click_the_submit_button_and_it_should_show_error() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+}

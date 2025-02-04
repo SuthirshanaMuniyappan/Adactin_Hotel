@@ -1,0 +1,20 @@
+package testRunner_SauceDemo;
+
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+
+@CucumberOptions(
+		features="src/test/java/StepDefinition_SauceDemo/LoginPagetoSauceDemo.java",
+		glue= {"stepdefinition_SauceDemo","hooks"}, 
+				plugin= {"pretty", "json:target/cucumber.json",
+						"html:target/cucumber.html"},
+				//tags="LoginPage",
+				dryRun=true
+		
+		)
+
+public class TestRunnerSauceDemo extends AbstractTestNGCucumberTests{
+	
+	
+
+}

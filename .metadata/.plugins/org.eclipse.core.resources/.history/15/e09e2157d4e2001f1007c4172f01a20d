@@ -1,0 +1,8 @@
+@All_Scenarios
+Feature: Product Search
+
+Scenario: Validating product search and AddToCard
+Given User shoule be in NopCommerce home page
+When
+And
+Then

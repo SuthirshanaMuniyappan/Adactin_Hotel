@@ -1,0 +1,17 @@
+package hooks;
+
+public class hooksClass {
+	
+	public void launch() {
+		driver.get("http://192.168.99.141:3000/");
+		driver.manage().window().maximize();
+		Thread.sleep(1000);
+
+	}
+	
+	public void quit() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package StepDefinition_SauceDemo;
+
+public class LogoutSauceDemo {
+	@Then("User clicks the three lines")
+	public void user_clicks_the_three_lines() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User clicks the logout")
+	public void user_clicks_the_logout() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

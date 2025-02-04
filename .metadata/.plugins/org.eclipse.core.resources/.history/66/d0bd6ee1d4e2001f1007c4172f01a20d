@@ -1,0 +1,33 @@
+package stepDefinitionNOP;
+
+import driver.driverInstance;
+import io.cucumber.java.en.*;
+
+public class NOP_ProductSearch extends driverInstance{
+	@Given("User should be in NopCommerce home page")
+	public void user_should_be_in_nop_commerce_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User navigate to Apparel and select shoes")
+	public void user_navigate_to_apparel_and_select_shoes() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User select the shoe model and press add to card")
+	public void user_select_the_shoe_model_and_press_add_to_card() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User select size and colour")
+	public void user_select_size_and_colour() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+}

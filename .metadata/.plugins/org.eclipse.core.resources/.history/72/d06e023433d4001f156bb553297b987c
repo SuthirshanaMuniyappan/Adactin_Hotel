@@ -1,0 +1,33 @@
+package stepDef;
+
+import io.cucumber.java.en.*;
+
+public class deleteSelectedpolicy {
+
+	@Given("User should be in Login Page")
+	public void user_should_be_in_login_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User Select the account using AccountName for delete")
+	public void user_select_the_account_using_account_name_for_delete() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User clicks the delete button one by one")
+	public void user_clicks_the_delete_button_one_by_one() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Account should be deleted")
+	public void account_should_be_deleted() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+}

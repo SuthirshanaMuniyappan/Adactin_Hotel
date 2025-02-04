@@ -1,0 +1,9 @@
+@All_Scenarios
+@Sauce_Demo
+Feature: Login to Sauce Demo
+  #Author: Suthir
+  
+  Scenario: SauceDemo Successful login with valid credentials
+    Given User should be in Sauce Demo login page
+    When User enter valid Username and Password
+    Then User should be logged in successfully
